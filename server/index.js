@@ -11,6 +11,11 @@ app.use(express.urlencoded({extended: true}));//recognize incoming requests as s
 //working with cross origin requests
 app.use(cors());
 
+app.get("/",(req,res)=>{
+    res.send("GoPostal backend server active");
+})
+
 app.use("/sendgrid",require("./mails/sendgrid"))
+app.use("/mailgun",require("./mails/mailgun"))
 
 app.listen(3000,()=>{console.log("Server is listening on port 3000")});
