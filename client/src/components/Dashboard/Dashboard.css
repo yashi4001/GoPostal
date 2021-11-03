@@ -1,0 +1,22 @@
+.dashHead{
+    color:floralwhite
+}
+.dashboard{
+    height:100vh;
+    padding: 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logout{
+    height: max-content;
+    padding:8px;
+    background-color: rgb(2, 103, 218);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}

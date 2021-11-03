@@ -1,0 +1,11 @@
+.login{
+    height: 100vh;
+}
+.loginHead{
+    color: azure;
+    text-align: center;
+    font-size: 4em;
+}
+span{
+    color: rgb(126, 112, 221);
+}
