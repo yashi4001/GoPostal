@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+.preview{
+    background-color: white;
+    width:45%;
+    border-radius:3px;
+    padding:10px;
+    font-family: 'Merriweather', serif;
+}
+.prevText{
+    background-color: rgb(238, 238, 238);
+    margin-top: 2%;
+    width: 90%;
+    border-radius: 5px;
+    padding:8px;
+    font-size: 14px;
+}
