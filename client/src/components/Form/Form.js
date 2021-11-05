@@ -2,7 +2,7 @@ import { auth } from "../Login/setupFirebase"
 import swal from 'sweetalert';
 import { useState } from "react";
 import "./Form.css"
-export const Form=()=>{
+export const Form=(props)=>{
     const axios=require('axios');
     const user=auth.currentUser;
     const email=user.email;
@@ -27,13 +27,13 @@ export const Form=()=>{
     }
     return(
         <div>
-            <input type="text" placeholder="Subject" onChange={(event)=>{setSubject(event.target.value)}}></input>
+            <input type="text" placeholder="Subject" onChange={(event)=>{setSubject(event.target.value);props.passData({name,email,subject,rec,content})}}></input>
             <br />
-            <input type="text" placeholder="Receipient" onChange={(event)=>{setRec(event.target.value)}}></input>
+            <input type="text" placeholder="Receipient" onChange={(event)=>{setRec(event.target.value);props.passData({name,email,subject,rec,content})}}></input>
             <br />
             <input type="text" placeholder={user.email}></input>
             <br />
-            <textarea placeholder="Email content" cols="60" rows="10" onChange={(event)=>{setContent(event.target.value)}}></textarea>
+            <textarea placeholder="Email content" cols="60" rows="10" onChange={(event)=>{setContent(event.target.value);props.passData({name,email,subject,rec,content})}}></textarea>
             <br />
             <button className="email" onClick={sendMail}>Send</button>
         </div>
