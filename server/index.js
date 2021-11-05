@@ -20,4 +20,4 @@ app.get("/",(req,res)=>{
 app.use("/sendgrid",require("./mails/sendgrid"))
 app.use("/mailgun",require("./mails/mailgun"))
 
-app.listen(3000,async ()=>{console.log("Server is listening on port 3000"); await mongo();});
+app.listen(5000,async ()=>{console.log("Server is listening on port 5000"); await mongo();});
