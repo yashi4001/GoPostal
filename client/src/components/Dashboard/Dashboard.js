@@ -21,7 +21,7 @@ export const Dashboard=()=>{
         <div className="dashboard">
             <div className="header">
                 <h1 className="dashHead">Hello <span>{user.displayName}</span></h1>
-                <button className="logout" onClick={logout}>Logout</button>
+                <button className="butt" onClick={logout}>Logout</button>
             </div>
             <div class="content">
                 <Form passData={formData} />

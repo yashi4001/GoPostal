@@ -8,6 +8,13 @@ var mailgun = require('mailgun-js')({apiKey: API_KEY, domain: DOMAIN});
 
 app.post("/send",(req,res)=>{
   const info=(req.body)
+  const emails=info.rec;
+  let toString="";
+
+  emails.map(email=>{
+    toString+=email+", ";
+  })
+  
   const data = {
     from: `${info.name} ${info.email}`,
     to: `${info.rec}`,
@@ -19,7 +26,7 @@ app.post("/send",(req,res)=>{
     subject:info.subject,
     message:info.content,
     sender:info.email,
-    recipient:new Array(info.rec),
+    recipient:toString,
     timestamp:new Date()
   }
 
@@ -30,7 +37,10 @@ app.post("/send",(req,res)=>{
   
   mailgun.messages().send(data, (error, body) => {
     if(!error) res.status(200).send("Email sent successfully");
-    else res.status(500).send("Internal server error");
+    else {
+      console.log(error);
+      res.status(500).send("Internal server error");
+    }
   });
 })
 

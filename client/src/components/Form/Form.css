@@ -9,15 +9,3 @@ textarea{
     margin-top:2%;
     border: 3px;
 }
-.email{
-    height: max-content;
-    padding:8px;
-    background-color: rgb(0, 50, 143);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    margin-top: 2%;
-    color: azure;
-}

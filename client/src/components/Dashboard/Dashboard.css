@@ -10,15 +10,16 @@
     justify-content: space-between;
     align-items: center;
 }
-.logout{
+.butt{
     height: max-content;
-    padding:8px;
-    background-color: rgb(2, 103, 218);
+    padding:10px 16px;
+    background-color: rgb(87, 73, 179);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    color:white
 }
 .content{
     display: flex;
